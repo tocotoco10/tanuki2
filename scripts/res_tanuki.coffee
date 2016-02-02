@@ -1,4 +1,4 @@
-cription
+# Description
 #   A Hubot script that response words for tanuki
 #
 # Dependencies:
@@ -7,6 +7,7 @@ cription
 # Commands:
 #
 #
+
 rtxt1 = [
   "ポン？",
   "ポコポコポーン♪",
