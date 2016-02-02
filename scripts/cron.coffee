@@ -52,7 +52,7 @@ module.exports = (robot) ->
   ).start()
 
 
-  new cronJob( '0 47 0 * * 1-5', () =>
+  new cronJob( '0 51 0 * * 1-5', () =>
     robot.send {room:"general"}, "今日も１日お疲れでしポン。\nそろそろおやすみ.な..さ...(_ _)zZZ", null ,true ,"Asia/Tokyo"
   ).start()
 
