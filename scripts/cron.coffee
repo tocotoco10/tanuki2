@@ -15,7 +15,7 @@ request = require 'request'
 limit   = ""
 
 module.exports = (robot) ->
-  new cronJob( '0 00 8 * * *', () =>
+  new cronJob( '0 10 8 * * *', () =>
     url = "http://b.hatena.ne.jp/hotentry/it.rss"
     options =
       url: url
@@ -31,11 +31,11 @@ module.exports = (robot) ->
         robot.send {room:"general"}, article, null, true, "Asia/Tokyo"
   ).start()
 
-  new cronJob( '0 00 6 * * 1-5', () =>
+  new cronJob( '0 10 7 * * 1-5', () =>
     robot.send {room:"general"}, "おはようございますポン。", null ,true, "Asia/Tokyo"
   ).start()
 
-  new cronJob( '0 30 7 * * 0,6', () =>
+  new cronJob( '0 45 7 * * 0,6', () =>
     robot.send {room:"general"}, "休みの日はゆっくり寝るポン。\n(_ _).｡o○", null ,true, "Asia/Tokyo"
   ).start()
 
