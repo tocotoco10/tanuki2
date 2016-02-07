@@ -24,7 +24,7 @@ module.exports = (robot) ->
     return if message is ''
     res
       .http 'https://api.apigw.smt.docomo.ne.jp/knowledgeQA/v1/ask'
-      .query APIKEY: process.env.HUBOT_DOCOMO_QA_API_KEY
+      .query APIKEY: process.env.HUBOT_DOCOMO_DIALOGUE_API_KEY
       .query q: message
       .get() (err, response, body) ->
         if err?
