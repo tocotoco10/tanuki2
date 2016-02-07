@@ -8,6 +8,7 @@
     "cron": "^1.1.0",
     "hubot": "^2.18.0",
     "hubot-diagnostics": "0.0.1",
+    "hubot-docomo-dialogue": "https://github.com/bouzuya/hubot-docomo-dialogue/archive/master.tar.gz",
     "hubot-google-images": "^0.2.6",
     "hubot-google-translate": "^0.2.0",
     "hubot-help": "^0.1.3",
