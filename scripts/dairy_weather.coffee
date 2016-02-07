@@ -20,12 +20,12 @@ module.exports = (robot) ->
       url: url
       timeout: 2000
     request options, (error, response, body) ->
-      forecastInfo = JSON.parse body
+#      forecastInfo = JSON.parse body
       day = 0
-      title     = forecastInfo['title']
-      link      = forecastInfo['link']
-			text      = forecastInfo['description']['text']
-			weather   = forecastInfo['forecasts'][day]
+      title     = JSON.parse body['title']
+      link      = JSON.parse body['link']
+			text      = JSON.parse body['description']['text']
+			weather   = JSON.parse body['forecasts'][day]
       forecast  = "<#{weather['date']}の#{title}>は「#{weather['telop']}」です。"
       robot.send {room:"test"}, forecast, null, true, "Asia/Tokyo" 
   ).start()
