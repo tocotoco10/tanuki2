@@ -39,6 +39,7 @@ module.exports = (robot) ->
       url: url
       json:
         utt: message
+        t: 20
         nickname: user_name if user_name
         context: context if context
       , (err, response, body) ->
