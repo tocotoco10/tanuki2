@@ -8,7 +8,7 @@ cronJob = require('cron').CronJob
 request = require 'request'
 
 module.exports = (robot) ->
-  new cronJob( '0 46 23 * * *', () =>
+  new cronJob( '0 11 7 * * *', () =>
     request 'http://weather.livedoor.com/forecast/webservice/json/v1?city=140010', (error, res, body) ->
       json = JSON.parse body
       title = json['title']
@@ -21,7 +21,7 @@ module.exports = (robot) ->
       robot.send {room:"general"}, article, null, true, "Asia/Tokyo"
   ).start()
 
-  new cronJob( '0 47 23 * * *', () =>
+  new cronJob( '0 30 18 * * *', () =>
     request 'http://weather.livedoor.com/forecast/webservice/json/v1?city=140010', (error, res, body) ->
       json = JSON.parse body
       title = json['title']
