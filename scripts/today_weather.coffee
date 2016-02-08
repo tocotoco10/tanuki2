@@ -17,14 +17,14 @@ module.exports = (robot) ->
       robot.send {room:"general"}, article, null, true, "Asia/Tokyo"
   ).start()
 
-  new cronJob( '0 2 23 * * *', () =>
+  new cronJob( '0 5 23 * * *', () =>
     request 'http://weather.livedoor.com/forecast/webservice/json/v1?city=140010', (error, res, body) ->
       json = JSON.parse body
       title = json['title']
       tommorowWeather = json['forecasts'][1]
       article = tommorowWeather['dateLabel'] + 'の' + title + 'は\n'
       article += tommorowWeather['image']['url'] + '\n    '
-	    article += tommorowWeather['telop'] + '\n    '
+      article += tommorowWeather['telop'] + '\n    '
       article += '最高気温：' + tommorowWeather['temperature']['max']['celsius'] + '℃\n    '
       article += '最低気温：' + tommorowWeather['temperature']['min']['celsius'] + '℃\n'
       article += tommorowWeather['image']['url']
