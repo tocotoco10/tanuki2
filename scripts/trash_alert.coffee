@@ -7,11 +7,16 @@
 cronJob = require('cron').CronJob
 
 module.exports = (robot) ->
-  new cronJob( '0 30 7 * * 2,6', () =>
-    msg = "☆★今日のゴミ収集★☆\n\n"
-    msg += " 『可燃・不燃の日』 \n\n"
-    msg += "出し忘れませんように！"
-    robot.send {room:"general"}, msg, null ,true, "Asia/Tokyo"
+  new cronJob( '0 11 0 * * *', () =>
+    data =
+      content:
+        pretext:"(´･Д･)」<ピンポンパンポーーーン♪"
+        title:"青葉区桂台のゴミ/資源収集"
+        text:"  本日の収集物：可燃ゴミ・不燃ゴミ\n  備考　　　　：スプレー缶もOK"
+        color:"#7CD197"
+        channel:"test"
+        username:"tanukibot"
+    robot.emit "slack.attachment", data
   ).start()
 
   new cronJob( '0 30 7 * * 1', () =>
