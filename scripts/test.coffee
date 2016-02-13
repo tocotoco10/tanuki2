@@ -6,4 +6,11 @@ module.exports = (robot) ->
     res.reply "ちょくかえすぽん"
 
   robot.hear /3/i, (res) ->
-    res.topic "```テスt"
+    data =
+      content:
+        text: "てすとてすと"
+        color: "#e84050"
+      channel: "general"
+      username: "tanukibot"
+      icon_emoji: ":shit:"
+    robot.emit "slack.attachment", data
