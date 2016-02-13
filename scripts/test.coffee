@@ -8,7 +8,8 @@ module.exports = (robot) ->
   robot.hear /3/i, (res) ->
     data =
       content:
-        title:"ヘッダーになる？"
+        pretext:"(´･Д･)」< 秘書タヌキからのお知らせっ！"
+        title:"◼︎◻︎今日のゴミ収集予定◻︎◼︎"
         text: "てすとてすと\nどうなるの？"
         fallback:"これは？"
         color: "#7CD197"
