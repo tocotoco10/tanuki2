@@ -32,7 +32,7 @@ module.exports = (robot) ->
             status = $this.find("td").eq(1).find(".colTrouble").text()
             info   = $this.find("td").eq(2).text()
 
-            message += "#{line}／#{status}：#{info}\n"
+            message += "#{line}／#{status}：#{info}\n```"
       else
         message = NO_RESULT_MESSAGE
 
