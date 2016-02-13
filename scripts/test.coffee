@@ -10,7 +10,7 @@ module.exports = (robot) ->
       content:
         text: "てすとてすと"
         color: "#e84050"
-      channel: "general"
+      channel: "test"
       username: "tanukibot"
       icon_emoji: ":shit:"
     robot.emit "slack.attachment", data
