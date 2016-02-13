@@ -21,7 +21,7 @@ module.exports = (robot) ->
     parseTable = ($table) ->
       $tr = $table.find("tr")
       if $tr.length != 0
-        message = TROUBLE_MESSAGE_PREFIX + "\n```"
+        message = TROUBLE_MESSAGE_PREFIX + "\n"
 
         $tr.each (i) ->
           # 最初の tr は表題が入るのでスルー
@@ -32,7 +32,7 @@ module.exports = (robot) ->
             status = $this.find("td").eq(1).find(".colTrouble").text()
             info   = $this.find("td").eq(2).text()
 
-            message += "#{line}／#{status}：#{info}\n```"
+            message += "#{line}／#{status}：#{info}\n"
       else
         message = NO_RESULT_MESSAGE
 
