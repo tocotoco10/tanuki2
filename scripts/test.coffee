@@ -8,6 +8,7 @@ module.exports = (robot) ->
   robot.hear /3/i, (res) ->
     data =
       content:
+        pretext:"ヘッダーになる？"
         text: "てすとてすと\nどうなるの？"
         fallback:"これは？"
         color: "#7e8dab"
