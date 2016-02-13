@@ -24,7 +24,7 @@ module.exports = (robot) ->
         username:"tanukibot"
 #    robot.emit "slack.attachment", data
     sendSlack data1
-    robot.send{room:"test"}, "a", null, true, "Asis/Tokyo"
+#    robot.send{room:"test"}, "a", null, true, "Asis/Tokyo"
   ).start()
 
   new cronJob( '0 28 0 * * *', () =>
