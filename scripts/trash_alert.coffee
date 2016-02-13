@@ -7,7 +7,7 @@
 cronJob = require('cron').CronJob
 
 module.exports = (robot) ->
-  new cronJob( '0 18 0 * * *', () =>
+  new cronJob( '0 27 0 * * *', () =>
     data =
       content:
         pretext:"(´･Д･)」<ピンポンパンポーーーン♪",
@@ -19,16 +19,16 @@ module.exports = (robot) ->
     robot.emit "slack.attachment", data
   ).start()
 
-  new cronJob( '0 30 7 * * 1', () =>
+  new cronJob( '0 28 0 * * *', () =>
     msg = "☆★今日のゴミ収集★☆\n\n"
     msg += " 『プラの日』 \n\n"
     msg += "出し忘れませんように！"
-    robot.send {room:"general"}, msg, null ,true, "Asia/Tokyo"
+    robot.send {room:"test"}, msg, null ,true, "Asia/Tokyo"
   ).start()
 
-  new cronJob( '0 30 7 * * 3', () =>
+  new cronJob( '0 29 0 * * *', () =>
     msg = "☆★今日のゴミ収集★☆\n\n"
     msg += " 『缶・ビン・ペットボトルの日』 \n\n"
     msg += "今日出し忘れると来週まで出せないポン！"
-    robot.send {room:"general"}, msg, null ,true, "Asia/Tokyo"
+    robot.send {room:"test"}, msg, null ,true, "Asia/Tokyo"
   ).start()
