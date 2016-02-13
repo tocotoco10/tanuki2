@@ -21,7 +21,7 @@ module.exports = (robot) ->
     parseTable = ($table) ->
       $tr = $table.find("tr")
       if $tr.length != 0
-        message = TROUBLE_MESSAGE_PREFIX + "\n"
+        message = TROUBLE_MESSAGE_PREFIX + "\n```"
 
         $tr.each (i) ->
           # 最初の tr は表題が入るのでスルー
