@@ -9,9 +9,20 @@ module.exports = (robot) ->
     data =
       content:
         pretext:"(´･Д･)」< 秘書タヌキからのお知らせっ！"
-        title:"◼︎◻︎今日のゴミ収集予定◻︎◼︎"
+        title:"今日のゴミ収集予定"
         text: "てすとてすと\nどうなるの？"
-        fallback:"これは？"
+        fields:[
+          {
+            title:"分類",
+            value:"缶・ビン・ペットボトル",
+            short:false
+          },
+          {
+            title:"メモ",
+            value:"スプレー缶は可燃の日でOK！",
+            short:false
+          }
+        ]
         color: "#7CD197"
       channel: "test"
       username: "tanukibot"
