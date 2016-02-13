@@ -13,7 +13,7 @@ module.exports = (robot) ->
   robot.hear /電車/i, (res) ->
     NO_RESULT_MESSAGE = "事故・遅延情報は教えて貰えませんでしたね"
     TROUBLE_MESSAGE_PREFIX = "東京周辺で遅延・運転見合わせ等情報がある路線の情報だポン。"
-    TRAIN_INFORMATION_URL = "http://transit.yahoo.co.jp/traininfo/area/7/"
+    TRAIN_INFORMATION_URL = "http://transit.yahoo.co.jp/traininfo/gc/13/"
 
     cheerio = require "cheerio-httpcli"
 
