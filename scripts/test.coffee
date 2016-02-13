@@ -6,4 +6,4 @@ module.exports = (robot) ->
     res.reply "ちょくかえすぽん"
 
   robot.hear /3/i, (res) ->
-    res.emote "```テスt"
+    res.topic "```テスt"
