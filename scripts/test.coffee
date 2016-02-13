@@ -9,6 +9,7 @@ module.exports = (robot) ->
     data =
       content:
         text: "てすとてすと\nどうなるの？"
+        fallback:"これは？"
         color: "#7e8dab"
       channel: "test"
       username: "tanukibot"
