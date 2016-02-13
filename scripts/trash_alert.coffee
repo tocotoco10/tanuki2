@@ -7,14 +7,14 @@
 cronJob = require('cron').CronJob
 
 module.exports = (robot) ->
-  new cronJob( '0 13 0 * * *', () =>
+  new cronJob( '0 18 0 * * *', () =>
     data =
       content:
-        pretext:"(´･Д･)」<ピンポンパンポーーーン♪"
-        title:"青葉区桂台のゴミ/資源収集"
-        text:"  本日の収集物：可燃ゴミ・不燃ゴミ\n  備考　　　　：スプレー缶もOK"
-        color:"#7CD197"
-        channel:"test"
+        pretext:"(´･Д･)」<ピンポンパンポーーーン♪",
+        title:"青葉区桂台のゴミ/資源収集",
+        text:"  本日の収集物：可燃ゴミ・不燃ゴミ\n  備考　　　　：スプレー缶もOK",
+        color:"#7CD197",
+        channel:"test",
         username:"tanukibot"
     robot.emit "slack.attachment", data
   ).start()
