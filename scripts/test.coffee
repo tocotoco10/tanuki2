@@ -15,12 +15,12 @@ module.exports = (robot) ->
           {
             title:"分類",
             value:"缶・ビン・ペットボトル",
-            short:false
+            short:true
           },
           {
             title:"メモ",
             value:"スプレー缶は可燃の日でOK！",
-            short:false
+            short:true
           }
         ]
         color: "#7CD197"
