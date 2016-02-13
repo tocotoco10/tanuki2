@@ -8,10 +8,10 @@ module.exports = (robot) ->
   robot.hear /3/i, (res) ->
     data =
       content:
-        pretext:"ヘッダーになる？"
+        title:"ヘッダーになる？"
         text: "てすとてすと\nどうなるの？"
         fallback:"これは？"
-        color: "#7e8dab"
+        color: "#7CD197"
       channel: "test"
       username: "tanukibot"
     robot.emit "slack.attachment", data
