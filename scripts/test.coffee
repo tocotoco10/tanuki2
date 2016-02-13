@@ -7,9 +7,9 @@ module.exports = (robot) ->
 
   robot.hear /3/i, (res) ->
     data =
-      content:
+      content:"おためし"
         text: "てすとてすと"
-        color: "#e84050"
+        color: "#7e8dab"
       channel: "test"
       username: "tanukibot"
       icon_emoji: ":shit:"
