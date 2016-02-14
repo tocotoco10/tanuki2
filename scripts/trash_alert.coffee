@@ -13,6 +13,18 @@ module.exports = (robot) ->
   sendSlack = (data) ->
     robot.emit "slack.attachment", data
 
+  job = new cronJob
+    cronTime: "0 13 14 * * *"
+    onTick: () ->
+      data =
+        content:
+          title:"テスト"
+          color:"#7CD197"
+          channel:"test"
+          username:"tanukibot"
+      sendSlack data
+  job.start()
+
   new cronJob( '0 13 10 * * *', () =>
     data1 =
       content:
