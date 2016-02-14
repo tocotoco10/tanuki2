@@ -26,7 +26,7 @@ module.exports = (robot) ->
       sendSlack(data1)
   job.start()
 
-  new cronJob( '0 13 10 * * *', () =>
+  new cronJob( '0 38 15 * * *', () =>
     data1 =
       content:
         pretext:"(´･Д･)」<ピンポンパンポーーーン♪",
@@ -36,8 +36,8 @@ module.exports = (robot) ->
         channel:"test",
         username:"tanukibot"
 #    robot.emit "slack.attachment", data
-    sendSlack(data1)
-#    robot.send{room:"test"}, "a", null, true, "Asis/Tokyo"
+#    sendSlack(data1)
+    robot.emit {room:"test"}, data1, null, true, "Asis/Tokyo"
   ).start()
 
   new cronJob( '0 28 0 * * *', () =>
