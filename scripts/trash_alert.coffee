@@ -9,19 +9,7 @@ cronJob = require('cron').CronJob
 
 
 module.exports = (robot) ->
-
-  new cronJob( '0 33 0 * * *', sendSlack, null, true, "Asia/Tokyo")
-
-  sendSlack = ->
-    data =
-      content:
-        title:"テスト"
-        color:"#7CD197"
-        channel:"test"
-        username:"tanukibot"
-    robot.emit "slack.attachment", data
-
-  new cronJob( '0 59 23 * * *', () =>
+  new cronJob( '0 29 0 * * *', (res) =>
     data1 =
       content:
         pretext:"(´･Д･)」<ピンポンパンポーーーン♪",
@@ -30,9 +18,9 @@ module.exports = (robot) ->
         color:"#7CD197",
         channel:"test",
         username:"tanukibot"
-#    robot.emit "slack.attachment", data
+    robot.emit "slack.attachment", data1
 #    sendSlack(data1)
-    robot.send {room:"test"}, data1, null, true, "Asis/Tokyo"
+#    robot.send {room:"test"}, data1, null, true, "Asis/Tokyo"
   ).start()
 
   new cronJob( '0 28 0 * * *', () =>
