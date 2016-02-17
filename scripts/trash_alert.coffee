@@ -9,7 +9,7 @@ cronJob = require('cron').CronJob
 
 
 module.exports = (robot) ->
-  new cronJob( '0 29 0 * * *', (res) =>
+  new cronJob( '0 31 0 * * *', (res) =>
     data1 =
       content:
         pretext:"(´･Д･)」<ピンポンパンポーーーン♪",
