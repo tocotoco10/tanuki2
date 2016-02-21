@@ -22,21 +22,23 @@ module.exports = (robot) ->
 #    robot.emit "slack.attachment", data
 
   cronJob = new cronJob(
-    cronTime: "0 12 22 * * *"
+    cronTime: "0 20 22 * * *"
     start: true
     timeZone: "Asia/Tokyo"
     onTick: ->
-#      data =
-#        content:
-#          pretext:"aa"
-#          title:"bb"
-#          text:"cc"
-#          color:"#7CD197"
-#          channel:"test"
-#          username:"tanukibot"
+      data =
+        content:
+          pretext:"aa"
+          title:"bb"
+          text:"cc"
+          color:"#7CD197"
+          channel:"test"
+          username:"tanukibot"
+      sendSlack (data) ->
+        robot.emit "slack.attachment", #{data}
 #      robot.emit "slack.attachment", data
-      data = "abc"
-      robot.send {room:"test"}, data
+#      data = "abc"
+#      robot.send {room:"test"}, data
   )
 #  job = new cronJob
 #    cronTime: "0 20 11 * * *"
