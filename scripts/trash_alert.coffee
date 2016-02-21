@@ -22,7 +22,7 @@ module.exports = (robot) ->
     robot.emit "slack.attachment", data
 
   cronJob = new cronJob(
-    cronTime: "0 35 22 * * *"
+    cronTime: "0 45 22 * * *"
     start: true
     timeZone: "Asia/Tokyo"
     onTick: ->
