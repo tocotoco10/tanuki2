@@ -17,12 +17,12 @@ module.exports = (robot) ->
         title:"bbb"
         text:"ccc"
         color:"#7CD197"
-#        channel:"test"
+        channel:"test"
         username:"tanukibot"
-    robot.emit "slack.attachment", data
+    robot.emit "slack.attachment", data, msg.message.room
 
   cronJob = new cronJob(
-    cronTime: "0 54 22 * * *"
+    cronTime: "0 5 0 * * *"
     start: true
     timeZone: "Asia/Tokyo"
     onTick: ->
