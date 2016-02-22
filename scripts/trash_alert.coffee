@@ -47,7 +47,7 @@ module.exports = (robot) ->
 #      sendSlack ab
 #  job.start()
 
-  new cronJob( '0 29 0 * * *', (res) ->
+  new cronJob( '0 34 0 * * *', () =>
     data1 =
       content:
         pretext:"(´･Д･)」<ピンポンパンポーーーン♪",
