@@ -14,7 +14,7 @@ module.exports = (robot) ->
     data =
       content:
         pretext:"#{words}"
-        title:"bbb"
+        title:"本日のゴミ/資源収集＜青葉区桂台＞"
         text:"ccc"
         color:"#7CD197"
       channel:"test"
@@ -24,11 +24,11 @@ module.exports = (robot) ->
 #    robot.send {room:"test"}, words
 
   cronJob = new cronJob(
-    cronTime: "0 32 0 * * *"
+    cronTime: "0 40 0 * * *"
 #    start: true
 #    timeZone: "Asia/Tokyo"
     onTick: ->
-      wd = "おためし"
+      wd = "(´･Д･)」< ピンポンパンポーーーン♪"
 #        content:
 #          pretext:"aa"
 #          title:"bb"
