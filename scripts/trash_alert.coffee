@@ -10,21 +10,21 @@ cronJob = require('cron').CronJob
 
 module.exports = (robot) ->
 
-  sendSlack = (words) ->
+  sendSlack = (words,res) ->
     data =
       content:
         pretext:"#{words}"
         title:"bbb"
         text:"ccc"
         color:"#7CD197"
-        channel:"test"
-        username:"tanukibot"
+      channel:"test"
+      username:"tanukibot"
     robot.emit "slack.attachment", data
-    return
+#    return
 #    robot.send {room:"test"}, words
 
   cronJob = new cronJob(
-    cronTime: "0 45 0 * * *"
+    cronTime: "0 30 0 * * *"
 #    start: true
 #    timeZone: "Asia/Tokyo"
     onTick: ->
