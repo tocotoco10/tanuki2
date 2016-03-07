@@ -24,7 +24,7 @@ module.exports = (robot) ->
 #    robot.send {room:"test"}, words
 
   cronJob = new cronJob(
-    cronTime: "0 30 0 * * *"
+    cronTime: "0 32 0 * * *"
 #    start: true
 #    timeZone: "Asia/Tokyo"
     onTick: ->
