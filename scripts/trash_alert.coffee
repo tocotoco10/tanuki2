@@ -41,7 +41,7 @@ module.exports = (robot) ->
   )
 
 
-  cronJob = new cronJob(
+  cronJob2 = new cronJob(
     cronTime: "0 15 8 * * 2,6"
     onTick: ->
       data =
@@ -70,7 +70,7 @@ module.exports = (robot) ->
     timeZone: "Asia/Tokyo"
   )
 
-  cronJob = new cronJob(
+  cronJob3 = new cronJob(
     cronTime: "0 15 8 * * 1"
     onTick: ->
       data =
