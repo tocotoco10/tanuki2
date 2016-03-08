@@ -48,13 +48,13 @@ module.exports = (robot) ->
     robot.emit "slack.attachment", data1
 
   cronJob = new cronJob(
-    cronTime: "0 54 23 * * *"
+    cronTime: "0 55 23 * * *"
     onTick: ->
       data =
         content:
           pretext:"(´･Д･)」< ピンポンパンポーーーン♪\n"
           title:"＜青葉区桂台|水曜＞ゴミ/資源回収の対象"
-          text:"　缶・ビン・ペットボトル ":champagne:
+          text:"　缶・ビン・ペットボトル :champagne:"
           color:"#7CD197"
         channel:"test"
         username:"tanukibot"
