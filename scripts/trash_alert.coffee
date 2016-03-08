@@ -10,7 +10,7 @@ module.exports = (robot) ->
 
   sendSlack = (data1,res) ->
     robot.emit "slack.attachment", data1
-
+###
   cronJob = new cronJob(
     cronTime: "0 15 8 * * 3"
     onTick: ->
@@ -39,7 +39,7 @@ module.exports = (robot) ->
     start: true
     timeZone: "Asia/Tokyo"
   )
-
+###
 
   cronJob2 = new cronJob(
     cronTime: "0 15 8 * * 2,6"
@@ -69,6 +69,7 @@ module.exports = (robot) ->
     start: true
     timeZone: "Asia/Tokyo"
   )
+###
 
   cronJob3 = new cronJob(
     cronTime: "0 15 8 * * 1"
@@ -98,4 +99,4 @@ module.exports = (robot) ->
     start: true
     timeZone: "Asia/Tokyo"
   )
-
+###
