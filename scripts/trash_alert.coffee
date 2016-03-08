@@ -10,25 +10,25 @@ cronJob = require('cron').CronJob
 
 module.exports = (robot) ->
 
-  sendSlack = (words,res) ->
-    data =
-      content:
-        pretext:"#{words}"
-        title:"本日のゴミ/資源収集＜青葉区桂台＞"
-        text:"ccc"
-        color:"#7CD197"
-      channel:"test"
-      username:"tanukibot"
-    robot.emit "slack.attachment", data
+##  sendSlack = (words,res) ->
+##    data =
+##      content:
+##        pretext:"#{words}"
+##        title:"本日のゴミ/資源収集＜青葉区桂台＞"
+##        text:"ccc"
+##        color:"#7CD197"
+##      channel:"test"
+##      username:"tanukibot"
+##    robot.emit "slack.attachment", data
 #    return
 #    robot.send {room:"test"}, words
 
-  cronJob = new cronJob(
-    cronTime: "0 40 0 * * *"
+##  cronJob = new cronJob(
+##    cronTime: "0 40 0 * * *"
 #    start: true
 #    timeZone: "Asia/Tokyo"
-    onTick: ->
-      wd = "(´･Д･)」< ピンポンパンポーーーン♪"
+##    onTick: ->
+##      wd = "(´･Д･)」< ピンポンパンポーーーン♪"
 #        content:
 #          pretext:"aa"
 #          title:"bb"
@@ -36,20 +36,35 @@ module.exports = (robot) ->
 #          color: "#7CD197"
 #          channel: "test"
 #          username: "tanukibot"
-      sendSlack (wd)
-      return
+##      sendSlack (wd)
+##      return
 #        robot.emit "slack.attachment", #{data}
 #      robot.emit "slack.attachment", data
 #      data = "abc"
 #      robot.send {room:"test"}, data
+##    start: true
+##    timeZone: "Asia/Tokyo"
+##  )
+
+  sendSlack = (data1,res) ->
+    robot.emit "slack.attachment", data1
+
+  cronJob = new cronJob(
+    cronTime: "0 32 23 * * *"
+    onTick: ->
+      data =
+        content:
+          pretext:"a"
+          title:"b"
+          text:"c"
+          color:"#7CD197"
+        channel:"test"
+        username:"tanukibot"
+      sendSlack (data)
+      return
     start: true
     timeZone: "Asia/Tokyo"
   )
-#  job = new cronJob
-#    cronTime: "0 20 11 * * *"
-#    onTick: () ->
-#      sendSlack ab
-#  job.start()
 
 #  new cronJob( '0 34 0 * * *', () =>
 #    data1 =
