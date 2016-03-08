@@ -41,7 +41,7 @@ module.exports = (robot) ->
   )
 ###
 
-  cronJob2 = new cronJob(
+  cronJob = new cronJob(
     cronTime: "0 15 8 * * 2,6"
     onTick: ->
       data =
