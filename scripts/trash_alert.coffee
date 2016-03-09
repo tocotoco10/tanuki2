@@ -39,12 +39,11 @@ module.exports = (robot) ->
     start: true
     timeZone: "Asia/Tokyo"
   )
-###
 
   cronJob = new cronJob(
     cronTime: "0 15 8 * * 2,6"
     onTick: ->
-      data =
+      data1 =
         content:
           pretext:"(´･Д･)」< ピンポンパンポーーーン♪\n"
           title:"＜青葉区桂台|火・土＞ゴミ/資源の収集"
@@ -64,7 +63,7 @@ module.exports = (robot) ->
           color:"#7CD197"
         channel:"general"
         username:"tanukibot"
-      sendSlack (data)
+      sendSlack (data1)
       return
     start: true
     timeZone: "Asia/Tokyo"
@@ -74,7 +73,7 @@ module.exports = (robot) ->
   cronJob = new cronJob(
     cronTime: "0 15 8 * * 1"
     onTick: ->
-      data =
+      data2 =
         content:
           pretext:"(´･Д･)」< ピンポンパンポーーーン♪\n"
           title:"＜青葉区桂台|月曜＞ゴミ/資源の収集"
@@ -94,9 +93,10 @@ module.exports = (robot) ->
           color:"#7CD197"
         channel:"general"
         username:"tanukibot"
-      sendSlack (data)
+      sendSlack (data2)
       return
     start: true
     timeZone: "Asia/Tokyo"
   )
-###
+
+
