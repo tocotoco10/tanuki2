@@ -5,6 +5,7 @@
   "author": "tocotoco10 <tocotoco.1010@gmail.com>",
   "description": "slack bot",
   "dependencies": {
+    "backlog2slack": "^0.4.0",
     "cheerio-httpcli": "^0.6.5",
     "cron": "^1.1.0",
     "hubot": "^2.18.0",
